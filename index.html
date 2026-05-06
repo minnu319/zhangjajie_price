@@ -172,6 +172,41 @@ tr:hover td.sticky-col{background:#f8f9ff;}
 .mc-arrow{color:#999;}
 .mc-imm{color:#0f3460;font-weight:700;}
 .mc-max{color:#dc2626;font-weight:900;font-size:0.86rem;}
+/* === 타겟별 혜택 섹션 (모든 탭 공통) === */
+.benefits-section{background:linear-gradient(180deg,#fffaf0 0%,#fff 100%);border-bottom:1px solid #f1e7d2;padding:22px 16px 24px;}
+.benefits-inner{max-width:1200px;margin:0 auto;}
+.benefits-header{display:flex;align-items:center;gap:8px;justify-content:center;margin-bottom:14px;}
+.benefits-header h2{font-size:1.12rem;font-weight:800;margin:0;color:#1a1a1a;letter-spacing:-0.01em;}
+.benefits-icon{font-size:1.35rem;line-height:1;}
+.benefits-sub{text-align:center;font-size:0.78rem;color:#777;margin:-8px 0 14px;}
+.benefits-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+.benefit-card{background:#fff;border-radius:14px;padding:16px 16px 14px;border:1.5px solid;box-shadow:0 2px 8px rgba(0,0,0,0.05);position:relative;overflow:hidden;transition:transform .18s,box-shadow .18s;}
+.benefit-card:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,0.09);}
+.benefit-card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;}
+.benefit-blue{border-color:#cfdcf4;}
+.benefit-blue::before{background:linear-gradient(90deg,#1d4ed8,#3b82f6);}
+.benefit-rose{border-color:#f5cdd6;}
+.benefit-rose::before{background:linear-gradient(90deg,#be123c,#f43f5e);}
+.benefit-green{border-color:#bfe3c7;}
+.benefit-green::before{background:linear-gradient(90deg,#047857,#10b981);}
+.benefit-card-head{display:flex;gap:10px;align-items:flex-start;margin-bottom:10px;padding-bottom:10px;border-bottom:1px dashed #e5e7eb;}
+.benefit-emoji{font-size:1.7rem;line-height:1;flex-shrink:0;}
+.benefit-title-wrap{flex:1;min-width:0;}
+.benefit-title-wrap h3{margin:0 0 4px;font-size:1rem;font-weight:800;color:#0f172a;letter-spacing:-0.01em;}
+.benefit-cond{display:inline-block;padding:2px 9px;border-radius:10px;font-size:0.72rem;font-weight:700;}
+.benefit-blue .benefit-cond{background:#dbeafe;color:#1e40af;}
+.benefit-rose .benefit-cond{background:#ffe4e6;color:#9f1239;}
+.benefit-green .benefit-cond{background:#d1fae5;color:#065f46;}
+.benefit-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:7px;}
+.benefit-list li{font-size:0.88rem;color:#334155;line-height:1.5;padding-left:18px;position:relative;}
+.benefit-list li::before{content:"✓";position:absolute;left:0;top:0;font-weight:900;font-size:0.92rem;}
+.benefit-blue .benefit-list li::before{color:#2563eb;}
+.benefit-rose .benefit-list li::before{color:#e11d48;}
+.benefit-green .benefit-list li::before{color:#059669;}
+.benefit-list strong{color:#0f172a;font-weight:800;}
+.benefit-blue .benefit-list strong{color:#1e3a8a;}
+.benefit-rose .benefit-list strong{color:#9f1239;}
+.benefit-green .benefit-list strong{color:#065f46;}
 @media(max-width:700px){
   body{font-size:14px;}
   .hero h1{font-size:1.3rem;}
@@ -186,6 +221,14 @@ tr:hover td.sticky-col{background:#f8f9ff;}
   .airline-list{flex-direction:column;}
   .cal-cards{grid-template-columns:1fr;}
   .view-btn{padding:7px 12px;font-size:0.8rem;}
+  .benefits-section{padding:18px 12px 20px;}
+  .benefits-grid{grid-template-columns:1fr;gap:10px;}
+  .benefits-header h2{font-size:1.02rem;}
+  .benefits-icon{font-size:1.2rem;}
+  .benefit-card{padding:13px 14px;}
+  .benefit-emoji{font-size:1.45rem;}
+  .benefit-title-wrap h3{font-size:0.95rem;}
+  .benefit-list li{font-size:0.85rem;}
 }
 @media(min-width:701px){.mobile-cards{display:none;}}
 .filter-section{background:white;border-radius:12px;padding:16px 18px;margin-bottom:14px;box-shadow:0 2px 8px rgba(0,0,0,.07);}
@@ -220,6 +263,56 @@ tr:hover td.sticky-col{background:#f8f9ff;}
 <span class="discount-badge badge-coupon">🎟 유류할인쿠폰 선착순 100명 -7만원 추가</span>
 </div>
 </div>
+<section class="benefits-section" aria-label="타겟별 혜택">
+<div class="benefits-inner">
+<div class="benefits-header">
+<span class="benefits-icon">🎯</span>
+<h2>타겟별 혜택</h2>
+</div>
+<p class="benefits-sub">조건에 맞는 혜택은 모든 출발지·일정에 동일하게 적용됩니다</p>
+<div class="benefits-grid">
+<div class="benefit-card benefit-blue">
+<div class="benefit-card-head">
+<span class="benefit-emoji">💼</span>
+<div class="benefit-title-wrap">
+<h3>총무님들 모여라</h3>
+<span class="benefit-cond">10명 이상</span>
+</div>
+</div>
+<ul class="benefit-list">
+<li>인당 <strong>4만원 할인</strong></li>
+<li><strong>단독행사</strong> 진행</li>
+<li>저녁 <strong>고량주 제공</strong></li>
+</ul>
+</div>
+<div class="benefit-card benefit-rose">
+<div class="benefit-card-head">
+<span class="benefit-emoji">👨‍👩‍👧</span>
+<div class="benefit-title-wrap">
+<h3>효도관광</h3>
+<span class="benefit-cond">자녀+부모 구성</span>
+</div>
+</div>
+<ul class="benefit-list">
+<li>“부모님 사랑합니다”<br><strong>과일바구니 1개</strong> 제공</li>
+</ul>
+</div>
+<div class="benefit-card benefit-green">
+<div class="benefit-card-head">
+<span class="benefit-emoji">👥</span>
+<div class="benefit-title-wrap">
+<h3>우리끼리 친목</h3>
+<span class="benefit-cond">친구·동료 모임</span>
+</div>
+</div>
+<ul class="benefit-list">
+<li>4인 이상 인당 <strong>2만원 추가할인</strong></li>
+<li>8인 이상 인당 <strong>3만원 추가할인</strong></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
 <div class="tabs-container">
 <div class="tabs">
 <button class="tab-btn active" onclick="showTab('tab-notice')" id="btn-tab-notice">📋 주의사항</button>
